@@ -9,6 +9,10 @@ class LogoStructure extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(10.0),
+      constraints: BoxConstraints(
+        minWidth: 400.0,
+        maxWidth: MediaQuery.of(context).size.width,
+      ),
       child: Center(
         child: SvgPicture.asset('assets/images/logo.svg',
             height: 200, width: 200, fit: BoxFit.cover),

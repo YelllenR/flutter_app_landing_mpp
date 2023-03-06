@@ -7,15 +7,25 @@ class IdentityName extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scaleText = MediaQuery.of(context).textScaleFactor;
+    // final screenWidth = MediaQuery.of(context).size.width;
+
+    var textFontSize = 40.clamp(25, 60);
+
     return Container(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all((25.0)),
       child: Center(
-        child: Text(
-          'Ma Petite Planète',
-          textScaleFactor: 3.0,
-          style: GoogleFonts.fredoka(
-              textStyle: const TextStyle(
-                  color: Colors.white, fontWeight: FontWeight.w600)),
+        child: SizedBox(
+          width: 250,
+          child: Text(
+            'Ma Petite Planète',
+            textAlign: TextAlign.center,
+            style: GoogleFonts.fredoka(
+                textStyle: TextStyle(
+                    fontSize: textFontSize * scaleText,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700)),
+          ),
         ),
       ),
     );
