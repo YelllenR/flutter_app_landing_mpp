@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widget/logoWidget.dart';
-import '../widget/nameWidget.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 class HomePageMpp extends StatefulWidget {
@@ -14,17 +13,28 @@ class _HomePageState extends State<HomePageMpp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              colors: [Color(0xff8cd7e5), Color(0xff5fd3ac)])),
-      child: Column(children: const <Widget>[
-        SizedBox(height: 250, width: 200),
-        LogoStructure(),
-        IdentityName()
-      ]),
-    ));
+        appBar: AppBar(
+          centerTitle: true,
+          automaticallyImplyLeading: false,
+          flexibleSpace: Container(
+            decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: [Color(0xff8cd7e5), Color(0xff5fd3ac)])),
+          ),
+          title: Text(
+            'Ma Petite Planète',
+            textScaleFactor: 2,
+            style: GoogleFonts.fredoka(
+                textStyle: const TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.w600)),
+          ),
+        ),
+        body: const Center(
+            child: Text(
+          'This is the text after splash screen',
+          style: TextStyle(color: Colors.black, fontSize: 22),
+        )));
   }
 }
