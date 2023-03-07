@@ -6,6 +6,7 @@ import 'package:flutter_app_landing_mpp/screens/home.dart';
 import '../widget/logoWidget.dart';
 import '../widget/nameWidget.dart';
 
+// Splash class
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
