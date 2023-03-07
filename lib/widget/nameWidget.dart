@@ -8,6 +8,7 @@ class IdentityName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scaleText = MediaQuery.of(context).textScaleFactor;
+
     var textFontSize = 40.clamp(25, 60);
     return Container(
         padding: const EdgeInsets.all(20.0),
@@ -25,5 +26,6 @@ class IdentityName extends StatelessWidget {
             ),
           ),
         ));
+
   }
 }
